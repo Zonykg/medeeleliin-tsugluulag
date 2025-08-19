@@ -95,14 +95,18 @@
         }
 
         .logo {
-            font-size: 32px;
-            font-weight: bold;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    
+    background-clip: text;           /* стандарт */
+    -webkit-background-clip: text;   /* Chrome, Safari */
+    
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
 
         @keyframes glow {
             from { filter: drop-shadow(0 0 5px rgba(255,215,0,0.5)); }
@@ -236,7 +240,7 @@
             font-size: 28px;
             margin-bottom: 25px;
             background: linear-gradient(45deg, #2a5298, #667eea);
-            -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             border-bottom: 4px solid transparent;
             border-image: linear-gradient(45deg, #ff6b6b, #feca57) 1;
